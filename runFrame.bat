@@ -1,3 +1,2 @@
-cd out\production\Sandbox
-java FrameDemo
+java -cp out\production\Sandbox FrameDemo
 pause >nul
