@@ -9,7 +9,7 @@ public class FrameDemo {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JLabel emptyLabel = new JLabel("fhdfhh");
-        emptyLabel.setPreferredSize(new Dimension(175, 100));
+        emptyLabel.setPreferredSize(new Dimension(200, 100));
         frame.getContentPane().add(emptyLabel, BorderLayout.CENTER);
 
         //Display the window.
