@@ -18,6 +18,9 @@ public class Student implements Comparable {
     private int groupId;
     private int educationYear;
 
+    public Student() {
+    }
+
     public Student(ResultSet rs) throws SQLException {
         setStudentId(rs.getInt(1));
         setFirstName(rs.getString(2));
@@ -94,9 +97,7 @@ public class Student implements Comparable {
     }
 
     public String toString() {
-        return surName + " " + firstName + " " + patronymic + ", " 
-                + DateFormat.getDateInstance(DateFormat.SHORT).format(dateOfBirth)
-                + ", Группа ИД=" + groupId + " Год:" + educationYear;
+        return surName + " " + firstName + " " + patronymic + ", " + DateFormat.getDateInstance(DateFormat.SHORT).format(dateOfBirth) + ", Группа ИД=" + groupId + " Год:" + educationYear;
     }
 
     public int compareTo(Object obj) {

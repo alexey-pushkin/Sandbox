@@ -182,7 +182,7 @@ public class ManagementSystem {
             stmt = con.prepareStatement(
                     "UPDATE students SET " +
                     "firstName=?, patronymic=?, surName=?, " +
-                    "sex=?, dateOfBirth=?, group_id=?, educationYear=?" +
+                    "sex=?, dateOfBirth=?, group_id=?, educationYear=? " +
                     "WHERE student_id=?");
             stmt.setString(1, student.getFirstName());
             stmt.setString(2, student.getPatronymic());

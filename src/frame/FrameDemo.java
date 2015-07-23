@@ -14,7 +14,7 @@ public class FrameDemo implements ActionListener {
     private JTextArea inputTextArea;
     private JTextArea outputTextArea;
 
-    private JButton button;
+    //private JButton button;
 
     private JRadioButton radio1;
     private JRadioButton radio2;

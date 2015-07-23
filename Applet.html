@@ -5,10 +5,11 @@
 </head>
 <body>
 	<!-- "clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" tells to use the latest JVM -->
-	<OBJECT 
+	<OBJECT type="application/x-java-applet"
   classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" 
   width="200" height="200" code="Applet1.class">
-  <PARAM name="code" value="Applet1.class">
+  <!--PARAM name="code" value="out\production\Sandbox\Applet1.class"-->
+  <param name="codebase" value="out/production/Sandbox">
 </OBJECT>
 </body>
 </html>
