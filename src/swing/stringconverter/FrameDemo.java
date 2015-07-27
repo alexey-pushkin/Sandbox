@@ -27,6 +27,8 @@ public class FrameDemo implements ActionListener {
     private Container pane;
 
     public FrameDemo() {
+        // ToDo remove border when radio is selected
+        // ToDo JUnit
 
         frame = initFrame("Text Converter");
 
@@ -48,8 +50,7 @@ public class FrameDemo implements ActionListener {
         radioUpperCase = addRadio("To upper case", new Rectangle(10, 450, 120, 20));
         radioLowerCase = addRadio("To lower case", new Rectangle(10, 470, 120, 20));
         radioCapitalize = addRadio("Capitalize every word", new Rectangle(10, 490, 150, 20));
-        radioKeyboardSwitch = addRadio("Keyboard switch: EN to RU", new Rectangle(180, 450, 180, 20));
-        radioKeyboardSwitch = addRadio("Keyboard switch: RU to EN", new Rectangle(180, 470, 180, 20));
+        radioKeyboardSwitch = addRadio("Keyboard switch: EN <=> RU", new Rectangle(180, 450, 190, 20));
 
         frame.pack(); // required with pane.setPreferredSize()
         frame.setVisible(true);
@@ -107,11 +108,8 @@ public class FrameDemo implements ActionListener {
             case "Capitalize every word":
                 output = StringConverter.capitalizeWords(input);
                 break;
-            case "Keyboard switch: EN to RU":
+            case "Keyboard switch: EN <=> RU":
                 output = StringConverter.KeyboardSwitchENRU(input);
-                break;
-            case "Keyboard switch: RU to EN":
-                output = StringConverter.KeyboardSwitchRUEN(input);
                 break;
         }
 

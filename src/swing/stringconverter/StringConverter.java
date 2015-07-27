@@ -21,15 +21,7 @@ public class StringConverter {
     public static String KeyboardSwitchENRU(String s) {
         StringBuffer result = new StringBuffer();
         for (char ch : s.toCharArray()) {
-            result.append(ENRUMap.get(ch));
-        }
-        return result.toString();
-    }
-
-    public static String KeyboardSwitchRUEN(String s) {
-        StringBuffer result = new StringBuffer();
-        for (char ch : s.toCharArray()) {
-            result.append(RUENMap.get(ch));
+            result.append(ENRUMap.get(ch) != null ? ENRUMap.get(ch) : RUENMap.get(ch));
         }
         return result.toString();
     }

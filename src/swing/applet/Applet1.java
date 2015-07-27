@@ -1,3 +1,5 @@
+package swing.applet;
+
 import javax.swing.*;
 
 public class Applet1 extends JApplet {
