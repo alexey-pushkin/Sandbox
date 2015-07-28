@@ -1,0 +1,1 @@
+Build project and run runFrame.bat or CalcMain.class
