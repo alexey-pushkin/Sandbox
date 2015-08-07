@@ -12,7 +12,7 @@ public class CalcFrame implements ActionListener {
     private JLabel inputLabel;
     private JLabel outputLabel;
 
-    private JTextArea inputTextArea;
+    private JTextArea displayTextArea;
     private JTextArea outputTextArea;
 
     //private JButton button;
@@ -37,7 +37,7 @@ public class CalcFrame implements ActionListener {
         //addLabel("Input", new Rectangle(10, 10, 50, 20));
         //addLabel("Output", new Rectangle(400, 10, 50, 20));
 
-        //inputTextArea = addLabeledTextArea("Input", new Rectangle(10, 35, 350, 400));
+        displayTextArea = addLabeledTextArea("Input", new Rectangle(10, 35, 350, 400));
         //outputTextArea = addLabeledTextArea("Output", new Rectangle(400, 35, 350, 400));
 
         addButton("1");
@@ -74,15 +74,18 @@ public class CalcFrame implements ActionListener {
     private JFrame initFrame(String name) {
         JFrame frame = new JFrame(name);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(new GridLayout(4, 3, 10, 10));
+        //frame.setLayout(new GridLayout(4, 3, 10, 10));
         return frame;
     }
 
     private Container initPane(Dimension dimension) {
-        Container pane = frame.getContentPane();
-        //frame.setContentPane(new MyForm());
-        pane.setPreferredSize(dimension);
-        return pane;
+        JPanel panel= new JPanel();
+
+        panel.setPreferredSize(dimension);
+        panel.setLayout(new GridLayout(4, 3, 10, 10));
+        panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        frame.setContentPane(panel);
+        return panel;
     }
 
     private void addLabel(String name, Rectangle position) {
@@ -111,7 +114,7 @@ public class CalcFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
 
-        String input = inputTextArea.getText();
+/*        String input = inputTextArea.getText();
         String output = "";
 
         switch (e.getActionCommand()) {
@@ -127,8 +130,8 @@ public class CalcFrame implements ActionListener {
             case "Keyboard switch: EN <=> RU":
                 output = StringConverter.KeyboardSwitchENRU(input);
                 break;
-        }
+        }*/
 
-        outputTextArea.setText(output);
+        /*outputTextArea.setText(output);*/
     }
 }
