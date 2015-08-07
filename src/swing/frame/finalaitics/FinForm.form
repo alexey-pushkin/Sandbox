@@ -11,7 +11,7 @@
       <component id="7be8a" class="javax.swing.JTextField" binding="monthlyIncome">
         <constraints>
           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="334" height="24"/>
+            <preferred-size width="59" height="24"/>
           </grid>
         </constraints>
         <properties>
@@ -21,7 +21,7 @@
       <component id="dff79" class="javax.swing.JTextField" binding="savingsRate">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="334" height="24"/>
+            <preferred-size width="59" height="24"/>
           </grid>
         </constraints>
         <properties>
@@ -31,7 +31,7 @@
       <component id="b8970" class="javax.swing.JTextField" binding="rateOfReturn">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="334" height="17"/>
+            <preferred-size width="59" height="17"/>
           </grid>
         </constraints>
         <properties>
@@ -81,7 +81,7 @@
       <component id="3419c" class="javax.swing.JTextField" binding="numberOfMonths">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="334" height="27"/>
+            <preferred-size width="59" height="27"/>
           </grid>
         </constraints>
         <properties/>
@@ -89,7 +89,7 @@
       <component id="56d48" class="javax.swing.JTextField" binding="textField4" default-binding="true">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="334" height="24"/>
+            <preferred-size width="59" height="24"/>
           </grid>
         </constraints>
         <properties/>
