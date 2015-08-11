@@ -5,32 +5,127 @@ import com.intellij.uiDesigner.core.GridLayoutManager;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by alpu1014 on 27.07.2015.
  */
 public class MyForm {
     private JPanel panel1;
-    private JTextField textField1;
+    private JTextField resultField;
     private JButton a7Button;
     private JButton a4Button;
     private JButton a8Button;
     private JButton a5Button;
     private JButton a9Button;
     private JButton a6Button;
-    private JButton a1Button1;
+    private JButton a1Button;
     private JButton a2Button;
     private JButton a3Button;
     private JButton a0Button;
-    private JButton button11;
-    private JButton button12;
-    private JButton button13;
-    private JButton button14;
-    private JButton button15;
-    private JButton button1;
+    private JButton commaButton;
+    private JButton divideButton;
+    private JButton multiplyButton;
+    private JButton subtractButton;
+    private JButton addButton;
+    private JButton resultButton;
+
+    private Calculator calculator;
+
+    public MyForm() {
+        calculator = new Calculator();
+
+        a1Button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                buttonClicked("1");
+            }
+        });
+        a2Button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                buttonClicked("2");
+            }
+        });
+        a3Button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                buttonClicked("3");
+            }
+        });
+        a4Button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                buttonClicked("4");
+            }
+        });
+        a5Button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                buttonClicked("5");
+            }
+        });
+        a6Button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                buttonClicked("6");
+            }
+        });
+        a7Button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                buttonClicked("7");
+            }
+        });
+        a8Button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                buttonClicked("8");
+            }
+        });
+        a9Button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                buttonClicked("9");
+            }
+        });
+        a0Button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                buttonClicked("0");
+            }
+        });
+
+        addButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                calculator.setOperation(Calculator.Operation.ADD);
+            }
+        });
+        subtractButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                calculator.setOperation(Calculator.Operation.SUBTRACT);
+            }
+        });
+        divideButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                calculator.setOperation(Calculator.Operation.DIVIDE);
+            }
+        });
+        multiplyButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                calculator.setOperation(Calculator.Operation.MULTIPLY);
+            }
+        });
+
+        resultButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resultField.setText(String.valueOf(calculator.getResult()));
+            }
+        });
+
+
+    }
+
+    private void buttonClicked(String s) {
+        resultField.setText(s);
+        calculator.addValue(Double.valueOf(s));
+    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("MyForm");
+        frame.setLocation(700, 300);
         frame.setContentPane(new MyForm().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
@@ -54,8 +149,9 @@ public class MyForm {
     private void $$$setupUI$$$() {
         panel1 = new JPanel();
         panel1.setLayout(new GridLayoutManager(5, 4, new Insets(0, 0, 0, 0), -1, -1));
-        textField1 = new JTextField();
-        panel1.add(textField1, new GridConstraints(0, 0, 1, 4, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
+        resultField = new JTextField();
+        resultField.setHorizontalAlignment(4);
+        panel1.add(resultField, new GridConstraints(0, 0, 1, 4, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         a7Button = new JButton();
         a7Button.setText("7");
         panel1.add(a7Button, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
@@ -83,27 +179,27 @@ public class MyForm {
         a0Button = new JButton();
         a0Button.setText("0");
         panel1.add(a0Button, new GridConstraints(4, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        button11 = new JButton();
-        button11.setText(",");
-        panel1.add(button11, new GridConstraints(4, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        button12 = new JButton();
-        button12.setText("/");
-        panel1.add(button12, new GridConstraints(1, 3, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        button13 = new JButton();
-        button13.setText("*");
-        panel1.add(button13, new GridConstraints(2, 3, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        button14 = new JButton();
-        button14.setText("-");
-        panel1.add(button14, new GridConstraints(3, 3, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        button15 = new JButton();
-        button15.setText("+");
-        panel1.add(button15, new GridConstraints(4, 3, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        a1Button1 = new JButton();
-        a1Button1.setText("1");
-        panel1.add(a1Button1, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        button1 = new JButton();
-        button1.setText("=");
-        panel1.add(button1, new GridConstraints(4, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        commaButton = new JButton();
+        commaButton.setText(",");
+        panel1.add(commaButton, new GridConstraints(4, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        divideButton = new JButton();
+        divideButton.setText("/");
+        panel1.add(divideButton, new GridConstraints(1, 3, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        multiplyButton = new JButton();
+        multiplyButton.setText("*");
+        panel1.add(multiplyButton, new GridConstraints(2, 3, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        subtractButton = new JButton();
+        subtractButton.setText("-");
+        panel1.add(subtractButton, new GridConstraints(3, 3, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        addButton = new JButton();
+        addButton.setText("+");
+        panel1.add(addButton, new GridConstraints(4, 3, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        a1Button = new JButton();
+        a1Button.setText("1");
+        panel1.add(a1Button, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        resultButton = new JButton();
+        resultButton.setText("=");
+        panel1.add(resultButton, new GridConstraints(4, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     }
 
     /**
