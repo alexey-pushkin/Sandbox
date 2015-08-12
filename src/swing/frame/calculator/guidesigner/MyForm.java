@@ -3,10 +3,13 @@ package swing.frame.calculator.guidesigner;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by alpu1014 on 27.07.2015.
@@ -120,6 +123,18 @@ public class MyForm {
         });
 
 
+        CEButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                calculator.clearEntry();
+                resultField.setText("");
+            }
+        });
+        cButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                calculator.clearAll();
+                resultField.setText("");
+            }
+        });
     }
 
     private void buttonClicked(String s) {
@@ -135,13 +150,33 @@ public class MyForm {
 
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("MyForm");
+   /* private static JFrame frame;
+
+    public static JFrame getFrame() {
+        return frame;
+    }*/
+
+    public static JFrame initFrame() {
+        JFrame frame = new JFrame("Calculator");
+        frame.setResizable(false);
+        try {
+            Image image = ImageIO.read(MyForm.class.getResource("images/icon.png"));
+            frame.setIconImage(image);
+        } catch (IOException exc) {
+            exc.printStackTrace();
+        }
+
         frame.setLocation(700, 300);
         frame.setContentPane(new MyForm().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+
+        return frame;
+    }
+
+    public static void main(String[] args) {
+        initFrame();
     }
 
     {
@@ -163,6 +198,7 @@ public class MyForm {
         panel1.setLayout(new GridLayoutManager(6, 4, new Insets(5, 5, 5, 5), -1, -1));
         resultField = new JTextField();
         resultField.setHorizontalAlignment(4);
+        resultField.setName("resultField");
         panel1.add(resultField, new GridConstraints(0, 0, 1, 4, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         a7Button = new JButton();
         a7Button.setText("7");
@@ -198,6 +234,7 @@ public class MyForm {
         addButton.setText("+");
         panel1.add(addButton, new GridConstraints(5, 3, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, new Dimension(50, 30), new Dimension(50, 30), new Dimension(50, 30), 0, false));
         a1Button = new JButton();
+        a1Button.setName("");
         a1Button.setText("1");
         panel1.add(a1Button, new GridConstraints(4, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, new Dimension(50, 30), new Dimension(50, 30), new Dimension(50, 30), 0, false));
         resultButton = new JButton();

@@ -6,11 +6,17 @@ public class Calculator {
     private Double valueB;
     private Operation operation;
     private Double result;
+    private Boolean isEmpty = true;
+
+    private Boolean isATurn = true;
+    private Boolean isBTurn = false;
+
+
 
     public enum Operation { ADD, SUBTRACT, MULTIPLY, DIVIDE }
 
     public void addValue(double input) {
-        if (operation == null) {
+        if (isATurn) {
             valueA = input;
         } else {
             valueB = input;
@@ -19,15 +25,11 @@ public class Calculator {
 
     public void setOperation(Operation operation) {
         this.operation = operation;
+        isATurn = false;
+        isBTurn = true;
     }
 
     public Double getResult() {
-
-        if (valueB == null) {
-            valueB = valueA;
-            valueA = 0.0;
-        }
-
 
         switch (operation) {
             case ADD: result = valueA + valueB; break;
@@ -38,7 +40,25 @@ public class Calculator {
         }
 
         valueA = result;
+        isATurn = true;
+        isBTurn = false;
 
         return result;
+    }
+
+    public void clearEntry() {
+        if (isATurn) {
+            valueA = null;
+        } else {
+            valueB = null;
+        }
+    }
+
+    public void clearAll() {
+        valueA = null;
+        valueB = null;
+        operation = null;
+        isATurn = true;
+        isBTurn = false;
     }
 }

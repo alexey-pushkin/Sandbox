@@ -16,6 +16,7 @@
         </constraints>
         <properties>
           <horizontalAlignment value="4"/>
+          <name value="resultField"/>
         </properties>
       </component>
       <component id="158f4" class="javax.swing.JButton" binding="a7Button" default-binding="true">
@@ -159,6 +160,7 @@
           </grid>
         </constraints>
         <properties>
+          <name value=""/>
           <text value="1"/>
         </properties>
       </component>
