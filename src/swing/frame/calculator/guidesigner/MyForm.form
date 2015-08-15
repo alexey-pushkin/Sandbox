@@ -15,6 +15,8 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
+          <font size="28"/>
           <horizontalAlignment value="4"/>
           <name value="resultField"/>
         </properties>
@@ -28,6 +30,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="7"/>
         </properties>
       </component>
@@ -40,6 +43,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="4"/>
         </properties>
       </component>
@@ -52,6 +56,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="5"/>
         </properties>
       </component>
@@ -64,6 +69,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="6"/>
         </properties>
       </component>
@@ -76,6 +82,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="2"/>
         </properties>
       </component>
@@ -88,6 +95,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="3"/>
         </properties>
       </component>
@@ -100,6 +108,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="0"/>
         </properties>
       </component>
@@ -112,6 +121,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value=","/>
         </properties>
       </component>
@@ -124,6 +134,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="*"/>
         </properties>
       </component>
@@ -136,6 +147,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="-"/>
         </properties>
       </component>
@@ -148,6 +160,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="+"/>
         </properties>
       </component>
@@ -160,6 +173,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <name value=""/>
           <text value="1"/>
         </properties>
@@ -173,10 +187,11 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="="/>
         </properties>
       </component>
-      <component id="54f74" class="javax.swing.JButton" binding="BackspaceButton">
+      <component id="54f74" class="javax.swing.JButton" binding="backspaceButton">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="30"/>
@@ -185,6 +200,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <font/>
           <text value="←"/>
         </properties>
@@ -198,6 +214,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="8"/>
         </properties>
       </component>
@@ -210,6 +227,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="9"/>
         </properties>
       </component>
@@ -222,6 +240,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="/"/>
         </properties>
       </component>
@@ -234,6 +253,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="CE"/>
         </properties>
       </component>
@@ -246,11 +266,12 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <selected value="true"/>
           <text value="C"/>
         </properties>
       </component>
-      <component id="b143" class="javax.swing.JButton" binding="button4" default-binding="true">
+      <component id="b143" class="javax.swing.JButton" binding="squareRoot">
         <constraints>
           <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="30"/>
@@ -259,6 +280,7 @@
           </grid>
         </constraints>
         <properties>
+          <focusable value="false"/>
           <text value="√"/>
         </properties>
       </component>
