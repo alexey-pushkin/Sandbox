@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="swing.frame.calculator.guidesigner.MyForm">
-  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="6" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="6" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="5" left="5" bottom="5" right="5"/>
     <constraints>
       <xy x="20" y="20" width="415" height="400"/>
@@ -31,6 +31,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="a7Button"/>
           <text value="7"/>
         </properties>
       </component>
@@ -44,6 +45,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="a4Button"/>
           <text value="4"/>
         </properties>
       </component>
@@ -57,6 +59,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="a5Button"/>
           <text value="5"/>
         </properties>
       </component>
@@ -70,6 +73,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="a6Button"/>
           <text value="6"/>
         </properties>
       </component>
@@ -83,6 +87,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="a2Button"/>
           <text value="2"/>
         </properties>
       </component>
@@ -96,6 +101,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="a3Button"/>
           <text value="3"/>
         </properties>
       </component>
@@ -109,10 +115,11 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="a0Button"/>
           <text value="0"/>
         </properties>
       </component>
-      <component id="a3185" class="javax.swing.JButton" binding="commaButton">
+      <component id="a3185" class="javax.swing.JButton" binding="dotButton">
         <constraints>
           <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="30"/>
@@ -122,7 +129,9 @@
         </constraints>
         <properties>
           <focusable value="false"/>
-          <text value=","/>
+          <label value="."/>
+          <name value="dotButton"/>
+          <text value="."/>
         </properties>
       </component>
       <component id="10b84" class="javax.swing.JButton" binding="multiplyButton">
@@ -135,6 +144,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="multiplyButton"/>
           <text value="*"/>
         </properties>
       </component>
@@ -148,6 +158,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="subtractButton"/>
           <text value="-"/>
         </properties>
       </component>
@@ -161,6 +172,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="addButton"/>
           <text value="+"/>
         </properties>
       </component>
@@ -174,7 +186,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
-          <name value=""/>
+          <name value="a1Button"/>
           <text value="1"/>
         </properties>
       </component>
@@ -188,6 +200,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="resultButton"/>
           <text value="="/>
         </properties>
       </component>
@@ -202,6 +215,7 @@
         <properties>
           <focusable value="false"/>
           <font/>
+          <name value="backspaceButton"/>
           <text value="←"/>
         </properties>
       </component>
@@ -215,6 +229,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="a8Button"/>
           <text value="8"/>
         </properties>
       </component>
@@ -228,6 +243,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="a9Button"/>
           <text value="9"/>
         </properties>
       </component>
@@ -241,10 +257,11 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="divideButton"/>
           <text value="/"/>
         </properties>
       </component>
-      <component id="e7bf0" class="javax.swing.JButton" binding="CEButton" default-binding="true">
+      <component id="e7bf0" class="javax.swing.JButton" binding="ceButton">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="30"/>
@@ -254,6 +271,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="ceButton"/>
           <text value="CE"/>
         </properties>
       </component>
@@ -267,11 +285,12 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="cButton"/>
           <selected value="true"/>
           <text value="C"/>
         </properties>
       </component>
-      <component id="b143" class="javax.swing.JButton" binding="squareRoot">
+      <component id="b143" class="javax.swing.JButton" binding="squareRootButton">
         <constraints>
           <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="30"/>
@@ -281,6 +300,7 @@
         </constraints>
         <properties>
           <focusable value="false"/>
+          <name value="squareRootButton"/>
           <text value="√"/>
         </properties>
       </component>

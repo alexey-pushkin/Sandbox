@@ -31,6 +31,14 @@ public class Calculator {
 
     public Double getResult() {
 
+        if (valueA == null && valueB == null) {
+            return null;
+        } else if (valueA == null) {
+            valueA = 0.0;
+        } else if (valueB == null) {
+            valueB = 0.0;
+        }
+
         switch (operation) {
             case ADD: result = valueA + valueB; break;
             case SUBTRACT: result = valueA - valueB; break;
