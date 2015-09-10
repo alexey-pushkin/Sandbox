@@ -26,6 +26,7 @@ public class MyFormTest {
     JButton subtractButton;
     JButton multiplyButton;
     JButton divideButton;
+    JButton squareRootButton;
     JButton resultButton;
 
     JButton dotButton;
@@ -57,6 +58,7 @@ public class MyFormTest {
         subtractButton = (JButton) getChildNamed(frame, "subtractButton");
         multiplyButton = (JButton) getChildNamed(frame, "multiplyButton");
         divideButton = (JButton) getChildNamed(frame, "divideButton");
+        squareRootButton = (JButton) getChildNamed(frame, "squareRootButton");
         resultButton = (JButton) getChildNamed(frame, "resultButton");
 
         dotButton = (JButton) getChildNamed(frame, "dotButton");
@@ -73,27 +75,27 @@ public class MyFormTest {
         // +=
         c();
         add();
-        res();
-        assertEquals("", result());
+        result();
+        assertEquals("", getResult());
 
         // +3=3
         c();
         add();
         a3();
-        res();
-        assertEquals("3", result());
+        result();
+        assertEquals("3", getResult());
 
         // -2=-2
         c();
         subtract();
         a2();
-        res();
-        assertEquals("-2", result());
+        result();
+        assertEquals("-2", getResult());
 
     }
 
     @Test
-    public void addition() {
+    public void operations() {
         c();
 
         // 1+2=3
@@ -104,13 +106,67 @@ public class MyFormTest {
         assertEquals("3", resultField.getText());
 
         // 23+11=34
-        /*a2Button.doClick();
+        a2Button.doClick();
         a3Button.doClick();
         addButton.doClick();
         a1Button.doClick();
         a1Button.doClick();
         resultButton.doClick();
-        assertEquals("34", resultField.getText());*/
+        assertEquals("34", getResult());
+
+        c();
+
+        // 3+11-40=-26
+        a3();
+        add();
+        a1();
+        a1();
+        subtract();
+        assertEquals("14", getResult());
+        a4();
+        a0();
+        result();
+        assertEquals("-26", getResult());
+
+        c();
+
+        // -5+13=8
+        subtract();
+        a5();
+        add();
+        a1();
+        a3();
+        result();
+        assertEquals("8", getResult());
+
+        // 10/20=0.5
+        a1();
+        a0();
+        divide();
+        a2();
+        a0();
+        result();
+        assertEquals("0.5", getResult());
+
+        // 12√3.464101615137
+        a1();
+        a2();
+        sqrt();
+        assertEquals("3.464101615137", getResult());
+
+        // 25√5
+        a2();
+        a5();
+        sqrt();
+        assertEquals("5", getResult());
+
+        // +7=12
+        add();
+        a7();
+        result();
+        assertEquals("12", getResult());
+
+        // ToDo more tests
     }
 
 
@@ -152,12 +208,13 @@ public class MyFormTest {
     private void subtract() {subtractButton.doClick();}
     private void multiply() {multiplyButton.doClick();}
     private void divide() {divideButton.doClick();}
-    private void res() {resultButton.doClick();}
+    private void sqrt() {squareRootButton.doClick();}
+    private void result() {resultButton.doClick();}
 
     private void dot() {dotButton.doClick();}
     private void c() {cButton.doClick();}
     private void ce() {ceButton.doClick();}
     private void backspace() {backspaceButton.doClick();}
 
-    private String result() { return resultField.getText();}
+    private String getResult() { return resultField.getText();}
 }

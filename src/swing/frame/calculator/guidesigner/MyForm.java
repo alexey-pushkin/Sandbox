@@ -38,7 +38,8 @@ public class MyForm {
     private JButton squareRootButton;
 
     private Calculator calculator;
-    private Boolean clearInputFlag = false;
+    private Boolean isOverrideInput = false;
+    private Boolean isResultSkipped = false;
 
     public MyForm() {
         calculator = new Calculator();
@@ -76,15 +77,17 @@ public class MyForm {
     }
 
     private void numericButtonClicked(String s) {
-        resultField.setText(clearInputFlag ? s : resultField.getText() + s);
+        resultField.setText(isOverrideInput ? s : resultField.getText() + s);
+        isOverrideInput = false;
         calculator.addValue(Double.valueOf(resultField.getText()));
     }
 
     private String format(double d) {
         if (d == (long) d)
-            return String.format("%d", (long) d);
+            return String.format("%,d", (long) d);
         else
-            return String.format("%s", d);
+           return String.format("%.14s", String.format("%,.16f", d));
+           // return String.format("%,.15f", d);
 
     }
 
@@ -142,26 +145,42 @@ public class MyForm {
 
         addButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                if (isResultSkipped) {
+                    resultButton.doClick();
+                }
                 calculator.setOperation(Calculator.Operation.ADD);
-                clearInputFlag = true;
+                isOverrideInput = true;
+                isResultSkipped = true;
             }
         });
         subtractButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                if (isResultSkipped) {
+                    resultButton.doClick();
+                }
                 calculator.setOperation(Calculator.Operation.SUBTRACT);
-                clearInputFlag = true;
+                isOverrideInput = true;
+                isResultSkipped = true;
             }
         });
         divideButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                if (isResultSkipped) {
+                    resultButton.doClick();
+                }
                 calculator.setOperation(Calculator.Operation.DIVIDE);
-                clearInputFlag = true;
+                isOverrideInput = true;
+                isResultSkipped = true;
             }
         });
         multiplyButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                if (isResultSkipped) {
+                    resultButton.doClick();
+                }
                 calculator.setOperation(Calculator.Operation.MULTIPLY);
-                clearInputFlag = true;
+                isOverrideInput = true;
+                isResultSkipped = true;
             }
         });
 
@@ -170,7 +189,8 @@ public class MyForm {
             public void actionPerformed(ActionEvent e) {
                 Double result = calculator.getResult();
                 resultField.setText(result != null ? format(result) : "");
-                clearInputFlag = false;
+                isOverrideInput = true;
+                isResultSkipped = false;
             }
         });
 
@@ -187,6 +207,15 @@ public class MyForm {
                 resultField.setText("");
             }
         });
+
+        squareRootButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                calculator.setOperation(Calculator.Operation.SQRT);
+                resultButton.doClick();
+            }
+        });
+
+        // todo backspace button
     }
 
     private static void initKeyListener(JFrame frame, final MyForm form) {
@@ -279,6 +308,8 @@ public class MyForm {
         panel = new JPanel();
         panel.setLayout(new GridLayoutManager(6, 4, new Insets(5, 5, 5, 5), -1, -1));
         resultField = new JTextField();
+        resultField.setAutoscrolls(true);
+        resultField.setColumns(0);
         resultField.setFocusable(false);
         resultField.setFont(new Font(resultField.getFont().getName(), resultField.getFont().getStyle(), 28));
         resultField.setHorizontalAlignment(4);

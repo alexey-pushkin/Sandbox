@@ -13,7 +13,7 @@ public class Calculator {
 
 
 
-    public enum Operation { ADD, SUBTRACT, MULTIPLY, DIVIDE }
+    public enum Operation { ADD, SUBTRACT, MULTIPLY, DIVIDE, SQRT }
 
     public void addValue(double input) {
         if (isATurn) {
@@ -44,6 +44,7 @@ public class Calculator {
             case SUBTRACT: result = valueA - valueB; break;
             case MULTIPLY: result = valueA * valueB; break;
             case DIVIDE: result = valueA / valueB; break;
+            case SQRT: result = Math.sqrt(valueA); break;
             default: result = 0.0;
         }
 
