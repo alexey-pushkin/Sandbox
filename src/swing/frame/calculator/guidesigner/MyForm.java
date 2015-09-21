@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 public class MyForm {
 
@@ -56,7 +57,7 @@ public class MyForm {
 
         setIcon(frame);
         frame.setContentPane(form.panel);
-        frame.setLocation(700, 300);
+        frame.setLocation(1300, 300); //todo return 700
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
@@ -83,12 +84,20 @@ public class MyForm {
     }
 
     private String format(double d) {
-        if (d == (long) d)
-            return String.format("%,d", (long) d);
-        else
-           return String.format("%.14s", String.format("%,.16f", d));
-           // return String.format("%,.15f", d);
+        DecimalFormat df;
+        if (d > 99999999999d) {
+            df = new DecimalFormat("#.########E00");
+        } else {
+            df = new DecimalFormat("###,###,###,###,###.###############");
+        }
+        return String.format("%.14s", df.format(d));
+    }
 
+    private void resultButtonClick() {
+        Double result = calculator.getResult();
+        resultField.setText(result != null ? format(result) : "");
+        isOverrideInput = true;
+        isResultSkipped = false;
     }
 
     private void initListeners() {
@@ -146,7 +155,7 @@ public class MyForm {
         addButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (isResultSkipped) {
-                    resultButton.doClick();
+                    resultButtonClick();
                 }
                 calculator.setOperation(Calculator.Operation.ADD);
                 isOverrideInput = true;
@@ -156,7 +165,7 @@ public class MyForm {
         subtractButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (isResultSkipped) {
-                    resultButton.doClick();
+                    resultButtonClick();
                 }
                 calculator.setOperation(Calculator.Operation.SUBTRACT);
                 isOverrideInput = true;
@@ -166,7 +175,7 @@ public class MyForm {
         divideButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (isResultSkipped) {
-                    resultButton.doClick();
+                    resultButtonClick();
                 }
                 calculator.setOperation(Calculator.Operation.DIVIDE);
                 isOverrideInput = true;
@@ -176,7 +185,7 @@ public class MyForm {
         multiplyButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (isResultSkipped) {
-                    resultButton.doClick();
+                    resultButtonClick();
                 }
                 calculator.setOperation(Calculator.Operation.MULTIPLY);
                 isOverrideInput = true;
@@ -187,10 +196,7 @@ public class MyForm {
         resultButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Double result = calculator.getResult();
-                resultField.setText(result != null ? format(result) : "");
-                isOverrideInput = true;
-                isResultSkipped = false;
+                resultButtonClick();
             }
         });
 
@@ -211,11 +217,21 @@ public class MyForm {
         squareRootButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 calculator.setOperation(Calculator.Operation.SQRT);
-                resultButton.doClick();
+                resultButtonClick();
             }
         });
 
-        // todo backspace button
+        backspaceButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String s = resultField.getText();
+                if (s.length() > 0) {
+                    resultField.setText(s.substring(0, s.length() - 1));
+                }
+                calculator.addValue(Double.valueOf(resultField.getText()));
+            }
+        });
+
+        // todo rename files and review them
     }
 
     private static void initKeyListener(JFrame frame, final MyForm form) {

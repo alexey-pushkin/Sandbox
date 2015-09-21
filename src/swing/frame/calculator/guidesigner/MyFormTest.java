@@ -146,13 +146,13 @@ public class MyFormTest {
         a2();
         a0();
         result();
-        assertEquals("0.5", getResult());
+        assertEquals("0,5", getResult());
 
         // 12√3.464101615137
         a1();
         a2();
         sqrt();
-        assertEquals("3.464101615137", getResult());
+        assertEquals("3,464101615137", getResult());
 
         // 25√5
         a2();
@@ -166,7 +166,60 @@ public class MyFormTest {
         result();
         assertEquals("12", getResult());
 
-        // ToDo more tests
+        c();
+        // -5*25←*100←←+7=-3
+        subtract();
+        a5();
+        multiply();
+        a2();
+        a5();
+        backspace();
+        multiply();
+        a1();
+        a0();
+        a0();
+        backspace();
+        backspace();
+        add();
+        a7();
+        result();
+        assertEquals("-3", getResult());
+
+        // 111111*111111=12345654321
+        a1();
+        a1();
+        a1();
+        a1();
+        a1();
+        a1();
+        multiply();
+        a1();
+        a1();
+        a1();
+        a1();
+        a1();
+        a1();
+        result();
+        assertEquals("12 345 654 321", getResult());
+
+        // 1111111*1111111=1234567654321
+        a1();
+        a1();
+        a1();
+        a1();
+        a1();
+        a1();
+        a1();
+        multiply();
+        a1();
+        a1();
+        a1();
+        a1();
+        a1();
+        a1();
+        a1();
+        result();
+        assertEquals("1,23456765E12", getResult());
     }
 
 
