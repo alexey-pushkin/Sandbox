@@ -13,7 +13,7 @@ import java.awt.event.KeyListener;
 import java.io.IOException;
 import java.text.DecimalFormat;
 
-public class MyForm {
+public class CalculatorForm {
 
     private JPanel panel;
     private JTextField resultField;
@@ -42,7 +42,7 @@ public class MyForm {
     private Boolean isOverrideInput = false;
     private Boolean isResultSkipped = false;
 
-    public MyForm() {
+    public CalculatorForm() {
         calculator = new Calculator();
         initListeners();
     }
@@ -53,7 +53,7 @@ public class MyForm {
 
     public static JFrame initFrame() {
         final JFrame frame = new JFrame("Calculator");
-        MyForm form = new MyForm();
+        CalculatorForm form = new CalculatorForm();
 
         setIcon(frame);
         frame.setContentPane(form.panel);
@@ -70,7 +70,7 @@ public class MyForm {
 
     public static void setIcon(JFrame frame) {
         try {
-            Image image = ImageIO.read(MyForm.class.getResource("images/icon.png"));
+            Image image = ImageIO.read(CalculatorForm.class.getResource("images/icon.png"));
             frame.setIconImage(image);
         } catch (IOException exc) {
             exc.printStackTrace();
@@ -234,7 +234,7 @@ public class MyForm {
         // todo rename files and review them
     }
 
-    private static void initKeyListener(JFrame frame, final MyForm form) {
+    private static void initKeyListener(JFrame frame, final CalculatorForm form) {
         frame.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {

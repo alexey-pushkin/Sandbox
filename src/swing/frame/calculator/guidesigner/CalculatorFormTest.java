@@ -9,7 +9,7 @@ import java.awt.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class MyFormTest {
+public class CalculatorFormTest {
 
     JButton a0Button;
     JButton a1Button;
@@ -39,7 +39,7 @@ public class MyFormTest {
     @Before
     public void init() throws Exception {
 
-        JFrame frame = MyForm.initFrame();
+        JFrame frame = CalculatorForm.initFrame();
 
         assertNotNull(frame);
 
