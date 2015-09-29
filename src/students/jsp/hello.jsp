@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>
-        Hello World Sample
+        swing.frame.Hello World Sample
     </title>
 </head>
 

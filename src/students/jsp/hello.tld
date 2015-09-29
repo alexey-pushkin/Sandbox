@@ -16,7 +16,7 @@
         <tag-class>students.jsp.tag.HelloTag</tag-class>
         <body-content>empty</body-content>
         <description>
-            Hello World Tag example
+            swing.frame.Hello World Tag example
         </description>
         <attribute>
             <name>name</name>
