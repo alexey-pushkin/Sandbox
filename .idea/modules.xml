@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/GWT/GWT.iml" filepath="$PROJECT_DIR$/GWT/GWT.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sandbox.iml" filepath="$PROJECT_DIR$/Sandbox.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring2/Spring2.iml" filepath="$PROJECT_DIR$/Spring2/Spring2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringAOPExample/SpringAOPExample.iml" filepath="$PROJECT_DIR$/SpringAOPExample/SpringAOPExample.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringExample/SpringExample.iml" filepath="$PROJECT_DIR$/SpringExample/SpringExample.iml" />
     </modules>
   </component>
