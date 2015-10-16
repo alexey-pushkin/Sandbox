@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="098eb3ef-de0a-4821-bad1-74ae50fa6151" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpringAOPExample" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spring2/src/main" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spring2/src/main/Capital.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spring2/src/main/Country.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_2_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpringAOPExample/SpringAOPExample.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spring2/src/main/config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpringAOPExample/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Java-Calculator/README.md" afterPath="$PROJECT_DIR$/../Java-Calculator/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpringExample/SpringExample.iml" afterPath="$PROJECT_DIR$/SpringExample/SpringExample.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Sandbox.iws" />
@@ -88,42 +75,29 @@
       <file leaf-file-name="Country.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Spring2/src/main/Country.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+            <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="459">
               <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SpringAOPExample/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+            <state vertical-scroll-proportion="0.43074325" vertical-offset="0" max-vertical-offset="592">
               <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-              <folding>
-                <marker date="1443599787914" expanded="true" signature="89:887" placeholder="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerService.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CustomerService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SpringAOPExample/src/main/java/ru/javaxblog/customer/services/CustomerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20101352" vertical-offset="0" max-vertical-offset="592">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
               <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-              <folding>
-                <element signature="e#159#160#0" expanded="true" />
-                <element signature="e#191#192#0" expanded="true" />
-                <element signature="e#229#230#0" expanded="true" />
-                <element signature="e#259#260#0" expanded="true" />
-                <element signature="e#290#291#0" expanded="true" />
-                <element signature="e#356#357#0" expanded="true" />
-                <element signature="e#386#387#0" expanded="true" />
-                <element signature="e#454#455#0" expanded="true" />
-                <element signature="e#495#496#0" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,7 +105,7 @@
       <file leaf-file-name="Spring-Customer.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SpringAOPExample/src/main/resources/Spring-Customer.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="272">
+            <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="272">
               <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
               <folding />
             </state>
@@ -141,7 +115,7 @@
       <file leaf-file-name="App.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SpringAOPExample/src/main/java/ru/javaxblog/common/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+            <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="561">
               <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
@@ -482,6 +456,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -692,23 +667,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -904,6 +864,10 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
+      <module name="" />
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -923,10 +887,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
-      <module name="" />
       <method />
     </configuration>
     <configuration default="false" name="StockWatcher" type="GWT.ConfigurationType" factoryName="GWT Configuration">
@@ -1000,44 +960,44 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Sandbox\Java-Calculator" />
-          <option name="myCopyRoot" value="E:\Sandbox\Java-Calculator" />
+          <option name="myVcsRoot" value="C:\disk d\Sandbox\Java-Calculator" />
+          <option name="myCopyRoot" value="C:\disk d\Sandbox\Java-Calculator" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Sandbox\Sandbox" />
-          <option name="myCopyRoot" value="E:\Sandbox\Sandbox" />
+          <option name="myVcsRoot" value="C:\disk d\Sandbox\Sandbox" />
+          <option name="myCopyRoot" value="C:\disk d\Sandbox\Sandbox" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Sandbox\Sandbox\.idea" />
-          <option name="myCopyRoot" value="E:\Sandbox\Sandbox\.idea" />
+          <option name="myVcsRoot" value="C:\disk d\Sandbox\Sandbox\.idea" />
+          <option name="myCopyRoot" value="C:\disk d\Sandbox\Sandbox\.idea" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Sandbox\Sandbox\GWT" />
-          <option name="myCopyRoot" value="E:\Sandbox\Sandbox\GWT" />
+          <option name="myVcsRoot" value="C:\disk d\Sandbox\Sandbox\GWT" />
+          <option name="myCopyRoot" value="C:\disk d\Sandbox\Sandbox\GWT" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Sandbox\Sandbox\Spring2" />
-          <option name="myCopyRoot" value="E:\Sandbox\Sandbox\Spring2" />
+          <option name="myVcsRoot" value="C:\disk d\Sandbox\Sandbox\Spring2" />
+          <option name="myCopyRoot" value="C:\disk d\Sandbox\Sandbox\Spring2" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Sandbox\Sandbox\SpringAOPExample" />
-          <option name="myCopyRoot" value="E:\Sandbox\Sandbox\SpringAOPExample" />
+          <option name="myVcsRoot" value="C:\disk d\Sandbox\Sandbox\SpringAOPExample" />
+          <option name="myCopyRoot" value="C:\disk d\Sandbox\Sandbox\SpringAOPExample" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Sandbox\Sandbox\SpringExample" />
-          <option name="myCopyRoot" value="E:\Sandbox\Sandbox\SpringExample" />
+          <option name="myVcsRoot" value="C:\disk d\Sandbox\Sandbox\SpringExample" />
+          <option name="myCopyRoot" value="C:\disk d\Sandbox\Sandbox\SpringExample" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Sandbox\Java-Calculator" />
-          <option name="myCopyRoot" value="E:\Sandbox\Java-Calculator" />
+          <option name="myVcsRoot" value="C:\disk d\Sandbox\Java-Calculator" />
+          <option name="myCopyRoot" value="C:\disk d\Sandbox\Java-Calculator" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Sandbox\Sandbox" />
-          <option name="myCopyRoot" value="E:\Sandbox\Sandbox" />
+          <option name="myVcsRoot" value="C:\disk d\Sandbox\Sandbox" />
+          <option name="myCopyRoot" value="C:\disk d\Sandbox\Sandbox" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -1306,7 +1266,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="6290">
           <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1318,21 +1277,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Java-Calculator/src/com/github/alexey_pushkin/java_calculator/CalculatorForm.form">
+      <provider editor-type-id="ui-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5389">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Java-Calculator/src/com/github/alexey_pushkin/java_calculator/CalculatorFormTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4743">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1340,7 +1297,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
           <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1348,7 +1304,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="680">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1490,19 +1445,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpringAOPExample/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding>
-            <marker date="1443599787914" expanded="true" signature="89:887" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SpringAOPExample/src/main/resources/Spring-Customer.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="272">
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="272">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
           <folding />
         </state>
@@ -1518,20 +1463,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SpringAOPExample/src/main/java/ru/javaxblog/customer/services/CustomerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20101352" vertical-offset="0" max-vertical-offset="592">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
           <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="e#159#160#0" expanded="true" />
-            <element signature="e#191#192#0" expanded="true" />
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#259#260#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringAOPExample/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43074325" vertical-offset="0" max-vertical-offset="592">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
